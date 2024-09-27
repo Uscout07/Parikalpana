@@ -127,7 +127,7 @@ export default function HomePage() {
               <div className="p-4 md:p-6">
                 <h3 className="font-bungee-inline text-xl md:text-2xl font-medium mb-2">The Caring Paws</h3>
                 <p className="mb-4">A website for pet care services and information.</p>
-                <a href="Caringpaws.png" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">Visit Site</a>
+                <a href="https://www.thecaringpaws.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">Visit Site</a>
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
