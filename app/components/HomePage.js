@@ -4,9 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Icon } from "@iconify/react";
-import i from "../Public/Caringpaws.png";
-import ii from "../Public/Futurevolt.png";
-import iii from "../Public/mtttalento.png";
+import { ProjectsSection } from "./Projects";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -18,14 +16,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div
-      className="min-h-screen bg-cream text-purple-900"
-      style={{
-        backgroundImage: `url("https://Images.unsplash.com/photo-1707134657472-51902d2854a4?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-        backgroundRepeat: "repeat-y",
-        backgroundSize: "cover",
-      }}
-    >
+    <div className="min-h-screen bg-cream text-purple-950 bg-gradient-to-tr from-blue-950 via-gray-900  to-purple-950">
       {/* Navigation */}
       <nav className="bg-purple-900 text-white p-4 md:p-6 sticky top-0 w-full z-50 shadow-lg">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
@@ -95,8 +86,8 @@ export default function HomePage() {
             backgroundSize: "cover",
           }}
         >
-          <h2 className="font-bungee-inline text-4xl md:text-6xl font-medium mb-6 text-purple-900">
-            Welcome to PARIKALPANA.IO
+          <h2 className="font-bungee-inline text-3xl md:text-6xl font-medium mb-6 px-10 text-purple-900">
+            Welcome to PARIKALPANA.IO's PORTFOLIO
           </h2>
           <p className="text-xl md:text-2xl font-bold text-purple-900 mb-8">
             Your partner in web development excellence
@@ -117,7 +108,7 @@ export default function HomePage() {
           <h2 className="font-bungee-inline text-3xl md:text-4xl font-medium mb-8 text-center">
             About Us
           </h2>
-          <p className="text-base md:text-lg max-w-3xl mx-auto font-medium">
+          <p className="text-base text-white md:text-lg max-w-3xl mx-auto font-medium max-md:px-2">
             PARIKALPANA.IO is a leading web development agency dedicated to
             crafting modern, responsive, and user-friendly websites that enhance
             online experiences for businesses of all sizes. Our talented team of
@@ -162,11 +153,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="technologies" data-aos="fade-up" className="mb-24">
-          <h2 className="text-3xl md:text-4xl font-bungee-inline font-medium mb-12 text-center">
+        <section
+          id="technologies"
+          data-aos="fade-up"
+          className="mb-24 bg-gradient-to-tr from-purple-500 to to-blue-400 w-full py-5"
+        >
+          <h2 className="text-3xl md:text-4xl font-bungee-inline font-medium mb-12 text-center ">
             Technologies We Use
           </h2>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12 ">
             <Icon
               icon="logos:html-5"
               width="48"
@@ -212,101 +207,28 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="projects" data-aos="fade-up" className="mb-24">
-          <h2 className="text-3xl md:text-4xl font-bungee-inline font-medium mb-12 text-center">
-            Our Projects
+        <ProjectsSection/>
+        <section
+          id="testimonial"
+          data-aos="fade-up"
+          className="mb-24 flex flex-col items-center"
+        >
+          <h2 className="text-3xl md:text-4xl font-bungee-inline font-medium mb-8 text-center">
+            Testimonial
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="relative h-80 w-full">
-                <Image
-                  src={i}
-                  alt="The Caring Paws"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="p-4 md:p-6">
-                <h3 className="font-bungee-inline text-xl md:text-2xl font-medium mb-2">
-                  The Caring Paws
-                </h3>
-                <p className="mb-4">
-                  A website for pet care services and information.
-                </p>
-                <a
-                  href="https://www.thecaringpaws.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-600 hover:underline"
-                >
-                  Visit Site
-                </a>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="w-full">
-                <Image src={ii} alt="FutureVolt" objectFit="cover" />
-              </div>
-              <div className="p-4 md:p-6">
-                <h3 className="font-bungee-inline text-xl md:text-2xl font-medium mb-2">
-                  FutureVolt
-                </h3>
-                <p className="mb-4">
-                  An energy company website showcasing sustainable solutions.
-                </p>
-                <a
-                  href="https://uscout07.github.io/FutureVolt/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-600 hover:underline"
-                >
-                  Visit Site
-                </a>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="relative h-80 md:w-full">
-                <Image
-                  src={iii}
-                  alt="The Caring Paws"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="p-4 md:p-6">
-                <h3 className="font-bungee-inline text-xl md:text-2xl font-medium mb-2">
-                  MT Talento
-                </h3>
-                <p className="mb-4">
-                  A talent management and recruitment platform.
-                </p>
-                <a
-                  href="https://uscout07.github.io/Mttalento/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-600 hover:underline"
-                >
-                  Visit Site
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="testimonial" data-aos="fade-up" className="mb-24 flex flex-col items-center">
-        <h2 className="text-3xl md:text-4xl font-bungee-inline font-medium mb-8 text-center">
-                Testimonial
-        </h2>
           <div className="bg-white rounded-lg shadow-md overflow-hidden md:w-2/5">
             <div className="p-4 md:p-6">
               <p className="mb-4 text-center font-medium">
-                "Udit and his team listen to all our needs and did the best job.<br/>
-                Reasonable prices, professional, honest, and reliable. Always<br/>
-                accessible and never minded the changes. We highly recommend<br/>
+                "Udit and his team listen to all our needs and did the best job.
+                <br />
+                Reasonable prices, professional, honest, and reliable. Always
+                <br />
+                accessible and never minded the changes. We highly recommend
+                <br />
                 them!"
               </p>
               <p className="text-right text-sm italic text-gray-500">
-                - Sylvia Martha Torres,
-                 The Caring Paws
+                - Sylvia Martha Torres, The Caring Paws
               </p>
             </div>
           </div>
@@ -317,7 +239,7 @@ export default function HomePage() {
             Contact Us
           </h2>
           <div className="max-w-2xl mx-auto">
-            <p className="text-base md:text-lg mb-6 text-center">
+            <p className="text-base md:text-lg mb-6 text-center text-white">
               Get in touch with us for your web development needs:
             </p>
             <ul className="text-base md:text-lg space-y-4">
